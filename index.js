@@ -12,6 +12,7 @@ function abs (x) {
 }
 
 function FirstLetter(str) {
+    if (typeof str !== 'string' || str === undefined) return 'not a string';
     return str[0].toUpperCase() + str.slice(1);
 }
 

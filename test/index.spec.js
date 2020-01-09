@@ -83,6 +83,14 @@ describe('function FirstLetter', () => {
         assert.notEqual(FirstLetter('hello world!'), 'hello world');
     });
 
+    it('should be \'not a string\' if str not a string', () => {
+        assert.equal(FirstLetter(456), 'not a string');
+    });
+
+    it('should be \'not a string\' if str undefined', () => {
+        assert.equal(FirstLetter(), 'not a string');
+    });
+
 });
 
 
@@ -93,7 +101,7 @@ describe('function FirstLetter', () => {
 
 it('should function mult works correct', () => {
     assert.equal(mult(2, 3), 6);
-})
+});
 
 it('should function mult works not correct', () => {
     assert.notEqual(mult(2, 3), 0);
