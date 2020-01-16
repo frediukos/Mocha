@@ -9,10 +9,8 @@ Here is the way how to install them before coding:
 
 * To check if you have Node.js installed, run this command in your Terminal:  **node -v**
 
-* Use this command: **npm install**
-
-* To confirm that you have **npm** installed run this command in the Terminal
-    (when you download Node.js, you automatically get npm installed on your computer): **npm -v**
+* To confirm that you have **npm** tool installed (when you download Node.js,
+you automatically get **npm** installed on your computer) run this command in the Terminal: **npm -v**
     
 * To install ☕️MOCHA☕️ JavaScript test framework for Node.js & The Browser️:  **npm install -g mocha**
 
@@ -21,9 +19,9 @@ Here is the way how to install them before coding:
 * And run all your tests: **npm test**
 
 
-### 📁 __[Mocha Tests](https://github.com/frediukos/Mocha/blob/master/index.spec.js)__
+### 📁 __[Mocha Tests](https://github.com/frediukos/Mocha/blob/master/test/index.spec.js)__
 
-### 📁 __[Chai Tests](https://github.com/frediukos/Mocha/blob/master/chai-index.spec.js)__
+### 📁 __[Chai Tests](https://github.com/frediukos/Mocha/blob/master/test/chai-index.spec.js)__
 
 ### 📁 __[Functions](https://github.com/frediukos/Mocha/blob/master/index.js)__
 
