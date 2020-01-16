@@ -1,4 +1,4 @@
-const assert = require('assert');
+const {expect} = require('chai');
 const {isItArray, abs, FirstLetter, triangle, mult} = require('../index.js');
 
 
@@ -7,41 +7,40 @@ const {isItArray, abs, FirstLetter, triangle, mult} = require('../index.js');
 
 describe('function isItArray', () => {
   it('should function isItArray returns true', () => {
-    assert.equal(isItArray([8, 15, 90, 3]), true);
+    expect(isItArray([8, 15, 90, 3])).true;
   });
 
   it('should function isItArray returns true', () => {
-    assert.equal(isItArray([]), true);
+    expect(isItArray([])).true;
   });
 
   it('should function isItArray returns true', () => {
-    assert.equal(isItArray(['8', 5, '90year', 3, undefined]), true);
+    expect(isItArray(['8', 5, '90year', 3, undefined])).true;
   });
 
   it('should function isItArray returns true', () => {
-    assert.equal(isItArray([0, NaN, 708664534, -32, undefined]), true);
+    expect(isItArray([0, NaN, 708664534, -32, undefined])).true;
   });
 
   it('should function isItArray returns true', () => {
-    assert.equal(isItArray([NaN]), true);
+    expect(isItArray([NaN])).true;
   });
 
   it('should function isItArray returns true', () => {
-    assert.equal(isItArray(['one', 'two', 'three', '']), true);
+    expect(isItArray(['one', 'two', 'three', ''])).true;
   });
 
   it('should function isItArray returns false, object is not an array', () => {
-    assert.equal(isItArray({}), false);
+    expect(isItArray({})).false;
   });
 
   it('should function isItArray returns false, null is not an array', () => {
-    assert.equal(isItArray(null), false);
+    expect(isItArray(null)).false;
   });
 
   it('should function isItArray returns false, Date is not an array', () => {
-    assert.equal(isItArray(new Date), false);
+    expect(isItArray(new Date)).false;
   });
-
 });
 
 
@@ -50,55 +49,53 @@ describe('function isItArray', () => {
 
 describe('function abs', () => {
   it('should  return 0, function abs works correct', () => {
-    assert.equal(abs(0), 0);
+    expect(abs(0)).eq(0);
   });
 
   it('should  return 1, function abs works correct', () => {
-    assert.equal(abs(1), 1);
+    expect(abs(1)).eq(1);
   });
 
   it('should return 1, function abs works correct', () => {
-    assert.equal(abs(-1), 1);
+    expect(abs(-1)).eq(1);
   });
 
   it('should return 678, function abs works not correct', () => {
-    assert.notEqual(abs(678), -678);
+    expect(abs(678)).not.eq(-678);
   });
 
   it('should return 46, function abs works not correct', () => {
-    assert.notEqual(abs(-46), -46);
+    expect(abs(-46)).not.eq(-46);
   });
 
   it('should return \'not a number\' if x not a number', () => {
-    assert.equal(abs('678'), 'not a number');
+    expect(abs('678')).eq('not a number');
   });
 
   it('should retern \'not a number\' if x undefined', () => {
-    assert.equal(abs(), 'not a number');
+    expect(abs()).eq('not a number');
   });
-
-});
+}); 
 
 
 // Function FirstLetter does the first letter of the string CAPITAL
 
 describe('function FirstLetter', () => {
   it('should returns str equal \'Frediuk Olena\' FirstLetter works correct', () => {
-    assert.equal(FirstLetter('frediuk Olena'), 'Frediuk Olena');
+    expect(FirstLetter('frediuk Olena')).eq('Frediuk Olena');
   });
 
   it('should returns str equal \'Hello world\' FirstLetter works NOT correct', () => {
-    assert.notEqual(FirstLetter('hello world!'), 'hello world');
+    expect(FirstLetter('hello world!')).not.eq('Hello world');
   });
 
-  it('should be \'not a string\' if str not a string', () => {
-    assert.equal(FirstLetter(456), 'not a string');
+  it('should be str as a string', () => {
+    expect(FirstLetter(456)).eq('not a string');
   });
 
-  it('should be \'not a string\' if str undefined', () => {
-    assert.equal(FirstLetter(), 'not a string');
+  it('should be str as a string', () => {
+    expect(FirstLetter()).eq('not a string');
   });
-
 });
 
 
@@ -106,61 +103,59 @@ describe('function FirstLetter', () => {
 
 describe('function triangle', () => {
   it('should return 7.62, function triangle works correct', () => {
-    assert.equal(triangle(7, 3), 7.62);
+    expect(triangle(7, 3)).eq(7.62);
   });
 
   it('should return 7.62, function triangle works correct', () => {
-    assert.equal(triangle(4, 3), 5);
+    expect(triangle(4, 3)).eq(5);
   });
 
   it('should a be a number, function triangle works correct', () => {
-    assert.equal(triangle(0, 7), 'not a triangle');
+    expect(triangle(0, 7)).eq('not a triangle');
   });
 
   it('should return \'not a triangle\', function triangle works correct', () => {
-    assert.equal(triangle(54, 0), 'not a triangle');
+    expect(triangle(54, 0)).eq('not a triangle');
   });
 
   it('should return \'not a triangle\', function triangle works correct', () => {
-    assert.equal(triangle(0, 0), 'not a triangle');
+    expect(triangle(0, 0)).eq('not a triangle');
   });
 
   it('should return \'not a triangle\', function triangle works correct', () => {
-    assert.equal(triangle(-7, 15), 'not a triangle');
+    expect(triangle(-7, 15)).eq('not a triangle');
   });
 
   it('should return \'not a triangle\', function triangle works correct', () => {
-    assert.equal(triangle(17, -15), 'not a triangle');
+    expect(triangle(17, -15)).eq('not a triangle');
   });
 
   it('should return \'not a triangle\', function triangle works correct', () => {
-    assert.equal(triangle(-35, -43), 'not a triangle');
+    expect(triangle(-35, -43)).eq('not a triangle');
   });
 
   it('should function triangle works only with numbers, a is a string now,', () => {
-    assert.equal(triangle('7f', 3), 'not a triangle');
+    expect(triangle('7f', 3)).eq('not a triangle');
   });
 
   it('should function triangle works only with numbers, b is a string now', () => {
-    assert.equal(triangle(7, 'num'), 'not a triangle');
+    expect(triangle(7, 'num')).eq('not a triangle');
   });
 
   it('should function triangle works only with numbers, a is an array now', () => {
-    assert.equal(triangle([4, 6, 8], 3), 'not a triangle');
+    expect(triangle([4, 6, 8], 3)).eq('not a triangle');
   });
 
   it('should function triangle works only with numbers, b is an array now', () => {
-    assert.equal(triangle(7, [6, 'f']), 'not a triangle');
+    expect(triangle(7, [6, 'f'])).eq('not a triangle');
   });
-
 });
-
 
 
 it('should function mult works correct', () => {
-  assert.equal(mult(2, 3), 6);
+  expect(mult(2, 3)).eq(6);
 });
 
 it('should function mult works not correct', () => {
-  assert.notEqual(mult(2, 3), 0);
+  expect(mult(2, 3)).not.eq(0);
 });
