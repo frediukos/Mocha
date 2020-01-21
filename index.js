@@ -15,7 +15,7 @@ function abs (x) {
 }
 
 // Function FirstLetter does the first letter of the string CAPITAL
-function FirstLetter(str) {
+function firstLetter(str) {
   if (typeof str !== 'string' || str === undefined) return 'not a string';
   return str[0].toUpperCase() + str.slice(1);
 }
@@ -34,4 +34,4 @@ function triangle(a, b) {
 function mult (a, b) {
   return a * b;
 }
-module.exports = {isItArray, abs, FirstLetter, triangle, mult};
+module.exports = {isItArray, abs, firstLetter, triangle, mult};

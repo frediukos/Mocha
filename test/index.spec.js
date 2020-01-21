@@ -1,5 +1,5 @@
 const assert = require('assert');
-const {isItArray, abs, FirstLetter, triangle, mult} = require('../index.js');
+const {isItArray, abs, firstLetter, triangle, mult} = require('../index.js');
 
 
 
@@ -82,21 +82,21 @@ describe('function abs', () => {
 
 // Function FirstLetter does the first letter of the string CAPITAL
 
-describe('function FirstLetter', () => {
-  it('should returns str equal \'Frediuk Olena\' FirstLetter works correct', () => {
-    assert.equal(FirstLetter('frediuk Olena'), 'Frediuk Olena');
+describe('function firstLetter', () => {
+  it('should returns str equal \'Frediuk Olena\' firstLetter works correct', () => {
+    assert.equal(firstLetter('frediuk Olena'), 'Frediuk Olena');
   });
 
-  it('should returns str equal \'Hello world\' FirstLetter works NOT correct', () => {
-    assert.notEqual(FirstLetter('hello world!'), 'hello world');
+  it('should returns str equal \'Hello world\' firstLetter works NOT correct', () => {
+    assert.notEqual(firstLetter('hello world!'), 'hello world');
   });
 
   it('should be \'not a string\' if str not a string', () => {
-    assert.equal(FirstLetter(456), 'not a string');
+    assert.equal(firstLetter(456), 'not a string');
   });
 
   it('should be \'not a string\' if str undefined', () => {
-    assert.equal(FirstLetter(), 'not a string');
+    assert.equal(firstLetter(), 'not a string');
   });
 
 });

@@ -1,5 +1,5 @@
 const {expect} = require('chai');
-const {isItArray, abs, FirstLetter, triangle, mult} = require('../index.js');
+const {isItArray, abs, firstLetter, triangle, mult} = require('../index.js');
 
 
 
@@ -80,21 +80,21 @@ describe('function abs', () => {
 
 // Function FirstLetter does the first letter of the string CAPITAL
 
-describe('function FirstLetter', () => {
-  it('should returns str equal \'Frediuk Olena\' FirstLetter works correct', () => {
-    expect(FirstLetter('frediuk Olena')).eq('Frediuk Olena');
+describe('function firstLetter', () => {
+  it('should returns str equal \'Frediuk Olena\' firstLetter works correct', () => {
+    expect(firstLetter('frediuk Olena')).eq('Frediuk Olena');
   });
 
-  it('should returns str equal \'Hello world\' FirstLetter works NOT correct', () => {
-    expect(FirstLetter('hello world!')).not.eq('Hello world');
-  });
-
-  it('should be str as a string', () => {
-    expect(FirstLetter(456)).eq('not a string');
+  it('should returns str equal \'Hello world\' firstLetter works NOT correct', () => {
+    expect(firstLetter('hello world!')).not.eq('Hello world');
   });
 
   it('should be str as a string', () => {
-    expect(FirstLetter()).eq('not a string');
+    expect(firstLetter(456)).eq('not a string');
+  });
+
+  it('should be str as a string', () => {
+    expect(firstLetter()).eq('not a string');
   });
 });
 
